@@ -4,7 +4,7 @@ import questions.*;
 
 public class Test {
     private String name;
-    private InterfaceQuestion[] questions;
+    private Question[] questions;
 
     public void setName(String arg){
 
@@ -14,19 +14,16 @@ public class Test {
         return this.name;
     }
 
-    public void setQuestions(InterfaceQuestion[] arg){
+    public void setQuestions(Question[] arg){
         questions = arg;
     }
 
     public void showQuestion(){
-        for (InterfaceQuestion g:questions
-             ) {
-            g.showQuestionAnswer();
-        }
+
     }
 
     public void changeQuestion(String arg, int i){
-        questions[i].setQuestion(arg);
+
     }
 
     public void deleteQuestion(){

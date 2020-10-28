@@ -1,42 +1,51 @@
 package questions;
 
-public abstract class Question implements InterfaceQuestion {
-    protected String question;
-    protected String authorQuestion;
-    protected int point;
-    protected String[] correctAnswer;
+import database.questionsdb.QuestionInterface;
 
-    public void setQuestion(String arg){
+import java.util.ArrayList;
+import java.util.List;
 
+public class Question {
+
+    private String question;
+    private TypeQuestion typeQuestion;
+    private List<Answer> answer;
+    private String authorQuestion;
+
+
+    public Question() {
+        answer = new ArrayList<Answer>();
     }
 
-    public String getQuestion(){
-        return this.question;
+    public TypeQuestion getTypeQuestion() {
+        return typeQuestion;
     }
 
-    public void setAuthorQuestion(String arg){
-
+    public void setTypeQuestion(TypeQuestion typeQuestion) {
+        this.typeQuestion = typeQuestion;
     }
 
-    public String getAuthorQuestion(){
-        return this.authorQuestion;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setPoint(int arg){
-        this.point = arg;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
-    public int getPoint(){
-        return this.point;
+    public String getAuthorQuestion() {
+        return authorQuestion;
     }
 
-    public void setCorrectAnswer(String[] arg){
-
+    public void setAuthorQuestion(String authorQuestion) {
+        this.authorQuestion = authorQuestion;
     }
 
-    public String[] getCorrectAnswer(){
-        return this.correctAnswer;
+    public List<Answer> getAnswer() {
+        return answer;
     }
 
-
+    public void setAnswer(List<Answer> answer) {
+        this.answer = answer;
+    }
 }
