@@ -2,37 +2,44 @@ package tests;
 
 import questions.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Test {
+    private int id;
     private String name;
-    private Question[] questions;
+    private List<Question> questionsList;
 
-    public void setName(String arg){
-
+    public Test() {
+        questionsList = new ArrayList<Question>();
     }
 
-    public String getName(){
-        return this.name;
+    public Test(String name, List<Question> questionsList) {
+        this.name = name;
+        this.questionsList = questionsList;
     }
 
-    public void setQuestions(Question[] arg){
-        questions = arg;
+    public int getId() {
+        return id;
     }
 
-    public void showQuestion(){
-
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void changeQuestion(String arg, int i){
-
+    public String getName() {
+        return name;
     }
 
-    public void deleteQuestion(){
-
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void editQuestion(){
-
+    public List<Question> getQuestionsList() {
+        return questionsList;
     }
 
-
+    public void setQuestionsList(List<Question> questionsList) {
+        this.questionsList = questionsList;
+    }
 }

@@ -1,28 +1,35 @@
 package questions;
 
-import database.questionsdb.QuestionInterface;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Question {
 
+    private int id;
     private String question;
     private TypeQuestion typeQuestion;
-    private List<Answer> answer;
+    private List<Answer> answersList;
     private String authorQuestion;
-
+    private int testId;
 
     public Question() {
-        answer = new ArrayList<Answer>();
+        answersList = new ArrayList<Answer>();
     }
 
-    public TypeQuestion getTypeQuestion() {
-        return typeQuestion;
-    }
-
-    public void setTypeQuestion(TypeQuestion typeQuestion) {
+    public Question(int testId, String question, TypeQuestion typeQuestion, List<Answer> answersList, String authorQuestion) {
+        this.testId = testId;
+        this.question = question;
         this.typeQuestion = typeQuestion;
+        this.answersList = answersList;
+        this.authorQuestion = authorQuestion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getQuestion() {
@@ -33,6 +40,22 @@ public class Question {
         this.question = question;
     }
 
+    public TypeQuestion getTypeQuestion() {
+        return typeQuestion;
+    }
+
+    public void setTypeQuestion(TypeQuestion typeQuestion) {
+        this.typeQuestion = typeQuestion;
+    }
+
+    public List<Answer> getAnswersList() {
+        return answersList;
+    }
+
+    public void setAnswersList(List<Answer> answersList) {
+        this.answersList = answersList;
+    }
+
     public String getAuthorQuestion() {
         return authorQuestion;
     }
@@ -41,11 +64,11 @@ public class Question {
         this.authorQuestion = authorQuestion;
     }
 
-    public List<Answer> getAnswer() {
-        return answer;
+    public int getTestId() {
+        return testId;
     }
 
-    public void setAnswer(List<Answer> answer) {
-        this.answer = answer;
+    public void setTestId(int testId) {
+        this.testId = testId;
     }
 }

@@ -1,6 +1,6 @@
-package database.usersdb;
+package database.normalusersdb;
 
-public interface UserInterface {
+public interface NormalUserService {
     void createUser();
     void readUser();
     void updateUser();
