@@ -1,12 +1,12 @@
-import database.questionsdb.*;
-import questions.*;
+/*import service.question.*;
+import question.*;
 import singleton.Singleton;
 
 import java.util.*;
 
 public class TestQuestionService {
     public static void main(String[] args) {
-        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/Testing/DataBase/Testing");
+        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/servlet.Testing/DataBase/servlet.Testing");
         TestQuestionService testQuestionService = new TestQuestionService();
         //testQuestionService.testCreate("Question2",5,TypeQuestion.ONE_ANSWER,"Author2");
         testQuestionService.testRead(5);
@@ -18,12 +18,12 @@ public class TestQuestionService {
         question.setTestId(testId);
         question.setTypeQuestion(typeQuestion);
         question.setAuthorQuestion(author);
-        QuestionService questionService = new QuestionServiceImpl();
+        QuestionAccessService questionService = new QuestionAccessServiceImpl();
         questionService.createQuestion(question);
     }
 
     public void testRead(int testId){
-        QuestionService questionService = new QuestionServiceImpl();
+        QuestionAccessService questionService = new QuestionAccessServiceImpl();
         List<Question> questionsList = new ArrayList<Question>();
         questionsList = questionService.readQuestion(testId);
         for(int i = 0; i < questionsList.size(); i++){
@@ -33,3 +33,4 @@ public class TestQuestionService {
         }
     }
 }
+*/

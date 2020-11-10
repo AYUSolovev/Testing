@@ -1,14 +1,13 @@
-import database.testsdb.TestService;
-import database.testsdb.TestServiceImpl;
+/*import service.test.*;
 import singleton.Singleton;
-import tests.Test;
+import model.test.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TestTestService {
     public static void main(String[] args){
-        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/Testing/DataBase/Testing");
+        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/servlet.Testing/DataBase/servlet.Testing");
         TestTestService testTestService = new TestTestService();
         //testTestService.testCreate("Test1");
         testTestService.testRead();
@@ -18,12 +17,12 @@ public class TestTestService {
     public void testCreate(String str){
         Test test = new Test();
         test.setName(str);
-        TestService testService = new TestServiceImpl();
+        TestAccessService testService = new TestAccessServiceImpl();
         testService.createTest(test);
     }
 
     public void testRead(){
-        TestService testService = new TestServiceImpl();
+        TestAccessService testService = new TestAccessServiceImpl();
         List<Test> testsList = new ArrayList<Test>();
         testsList = testService.readTest();
         for(int i = 0; i < testsList.size(); i++){
@@ -31,3 +30,4 @@ public class TestTestService {
         }
     }
 }
+*/

@@ -1,22 +1,23 @@
 /*
-
 import service.admuser.*;
+import service.dataLayer.normalUser.NormalUserAccessService;
+import service.dataLayer.normalUser.NormalUserAccessServiceImpl;
 import singleton.Singleton;
 import user.*;
 
 import java.sql.SQLException;
 
-public class TestAdmUserService {
+public class TestNormalUserService {
 
     public static void main(String[] args) throws SQLException{
         Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/Testing/DataBase/Testing");
-        TestAdmUserService testAdmUserService = new TestAdmUserService();
-        testAdmUserService.testCreate("Name5", "Login5", "Password5");
-        //testAdmUserService.testRead("Login1","Password1");
+        TestNormalUserService testAdmUserService = new TestNormalUserService();
+        //testAdmUserService.testCreate("Name1", "Login1", "Password1");
+        testAdmUserService.testRead("login1","password1");
     }
 
     public void testCreate(String name, String login, String pass){
-        User user = new AdmUser();
+        User user = new NormalUser();
         user.setPassword(pass);
         user.setLogin(login);
         user.setName(name);
@@ -25,9 +26,9 @@ public class TestAdmUserService {
     }
 
     public void testRead(String login, String pass){
-        User user = new AdmUser();
-        AdmUserAccessService admUserService = new AnswerAccessServiceImpl();
-        user = admUserService.readUser(login,pass);
+        User user = new NormalUser();
+        NormalUserAccessService normalUserService = new NormalUserAccessServiceImpl();
+        user = normalUserService.readUser(login,pass);
         System.out.print(user.getName() + " " + user.getLogin() + " " + user.getPassword());
     }
 }

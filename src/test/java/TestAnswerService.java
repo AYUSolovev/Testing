@@ -1,5 +1,5 @@
-import database.answersdb.*;
-import questions.Answer;
+/*import service.answer.*;
+import model.question.Answer;
 import singleton.Singleton;
 
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
 
 public class TestAnswerService {
     public static void main(String[] args){
-        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/Testing/DataBase/Testing");
+        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/servlet.Testing/DataBase/servlet.Testing");
         TestAnswerService testAnswerService = new TestAnswerService();
         //testAnswerService.testCreate(28,"Answer1",false);
         testAnswerService.testRead(28);
@@ -18,12 +18,12 @@ public class TestAnswerService {
         answer.setQuestionId(questionId);
         answer.setAnswer(ans);
         answer.setIsCorrect(isCorrect);
-        AnswerService answerService = new AnswerServiceImpl();
+        AnswerAccessService answerService = new AnswerAccessServiceImpl();
         answerService.createAnswer(answer);
     }
 
     public void testRead(int questionId){
-        AnswerService answerService = new AnswerServiceImpl();
+        AnswerAccessService answerService = new AnswerAccessServiceImpl();
         List<Answer> answersList = new ArrayList<Answer>();
         answersList = answerService.readAnswer(questionId);
         for (int i = 0; i < answersList.size(); i++){
@@ -32,3 +32,4 @@ public class TestAnswerService {
         }
     }
 }
+*/
