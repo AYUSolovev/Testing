@@ -16,7 +16,7 @@ public class AdmUserAccessServiceImpl implements AdmUserAccessService {
     private ResultSet resultSet;
 
     public void createUser(User admUser){
-        String sql = "INSERT INTO AdmUsers (name,login,password) VALUES(?,?,?)";
+        String sql = "INSERT INTO adm_users (name,login,password) VALUES(?,?,?)";
         try {
             preparedStatement = Singleton.getSingleton().getConnection().prepareStatement(sql);
             preparedStatement.setString(1, admUser.getName());
@@ -31,7 +31,7 @@ public class AdmUserAccessServiceImpl implements AdmUserAccessService {
     }
 
     public User readUser(String login){
-        String sql = "select * from admUsers";
+        String sql = "select * from adm_users";
         User user = null;
         try {
             preparedStatement = Singleton.getSingleton().getConnection().prepareStatement(sql);

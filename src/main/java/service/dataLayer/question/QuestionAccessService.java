@@ -9,4 +9,5 @@ public interface QuestionAccessService {
     List<Question> readQuestion(int testId);
     void updateQuestions(Question question);
     void deleteQuestion(int id);
+    Question findQuestion(String textQuestion);
 }

@@ -27,6 +27,15 @@ public class QuestionServiceImpl implements QuestionService {
         }
         return listQuestion;
     }
+    public Question findQuestion(String textQuestion){
+        Question question;
+        question = questionAccessService.findQuestion(textQuestion);
+        if(question != null) {
+            question.setAnswersList(answer.readAnswer(question.getId()));
+            return question;
+        }
+        throw new RuntimeException("Вопрос не найден");
+    }
 
     public void addQuestion(Question question) {
 

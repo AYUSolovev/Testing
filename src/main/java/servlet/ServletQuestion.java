@@ -1,4 +1,4 @@
-package servlet;
+/*package servlet;
 
 import model.question.Question;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,3 +35,4 @@ public class ServletQuestion extends HttpServlet {
     }
 
 }
+*/

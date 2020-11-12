@@ -14,7 +14,7 @@ public class NormalUserAccessServiceImpl implements NormalUserAccessService {
     private ResultSet resultSet;
 
     public void createUser(User normalUser) {
-        String sql = "INSERT INTO normalUsers (name,login,password) VALUES(?,?,?)";
+        String sql = "INSERT INTO normal_users (name,login,password) VALUES(?,?,?)";
         try {
             preparedStatement = Singleton.getSingleton().getConnection().prepareStatement(sql);
             preparedStatement.setString(1, normalUser.getName());
@@ -29,7 +29,7 @@ public class NormalUserAccessServiceImpl implements NormalUserAccessService {
     }
 
     public User readUser(String login) {
-        String sql = "select * from normalUsers";
+        String sql = "select * from normal_users";
         User user = null;
         try {
             preparedStatement = Singleton.getSingleton().getConnection().prepareStatement(sql);

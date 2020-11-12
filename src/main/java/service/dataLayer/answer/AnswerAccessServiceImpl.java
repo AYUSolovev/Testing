@@ -14,7 +14,7 @@ public class AnswerAccessServiceImpl implements AnswerAccessService {
     private ResultSet resultSet;
 
     public void createAnswer(Answer answer) {
-        String sql = "INSERT INTO Answers (isCorrect,answer,questionId) VALUES(?,?,?)";
+        String sql = "INSERT INTO Answers (is_correct,answer,question_id) VALUES(?,?,?)";
         try {
             preparedStatement = Singleton.getSingleton().getConnection().prepareStatement(sql);
             preparedStatement.setBoolean(1, answer.getIsCorrect());
@@ -38,8 +38,8 @@ public class AnswerAccessServiceImpl implements AnswerAccessService {
             while (resultSet.next()) {
                 answer = new Answer();
                 answer.setAnswer(resultSet.getString("answer"));
-                answer.setIsCorrect(resultSet.getBoolean("isCorrect"));
-                answer.setQuestionId(resultSet.getInt("questionId"));
+                answer.setIsCorrect(resultSet.getBoolean("is_correct"));
+                answer.setQuestionId(resultSet.getInt("question_id"));
                 answersList.add(answer);
             }
         }catch (SQLException e){

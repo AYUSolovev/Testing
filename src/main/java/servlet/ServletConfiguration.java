@@ -5,8 +5,6 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.Servlet;
-
 @Configuration
 public class ServletConfiguration {
 
@@ -24,14 +22,14 @@ public class ServletConfiguration {
         bean.setLoadOnStartup(1);
         return bean;
     }
-
+/*
     @Bean
     public ServletRegistrationBean servletQuestion(){
         ServletRegistrationBean bean = new ServletRegistrationBean(new ServletQuestion(), "/question");
         bean.setLoadOnStartup(1);
         return bean;
     }
-
+*/
     @Bean
     public FilterRegistrationBean securityServletFilter(){
         FilterRegistrationBean bean = new FilterRegistrationBean();
@@ -39,6 +37,5 @@ public class ServletConfiguration {
         bean.addUrlPatterns("/user/*");
         return bean;
     }
-
 
 }

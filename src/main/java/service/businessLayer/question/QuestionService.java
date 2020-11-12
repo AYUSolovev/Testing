@@ -9,4 +9,5 @@ public interface QuestionService {
     void addQuestion(Question question);
     void updateQuestion(Question question);
     void deleteQuestion(int id);
+    Question findQuestion(String textQuestion);
 }
