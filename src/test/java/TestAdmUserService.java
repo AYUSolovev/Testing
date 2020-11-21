@@ -1,7 +1,7 @@
 /*
 
 import service.admuser.*;
-import singleton.Singleton;
+import Singleton;
 import user.*;
 
 import java.sql.SQLException;

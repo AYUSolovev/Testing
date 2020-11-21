@@ -1,8 +1,8 @@
 /*
 import service.admuser.*;
-import service.dataLayer.normalUser.NormalUserAccessService;
-import service.dataLayer.normalUser.NormalUserAccessServiceImpl;
-import singleton.Singleton;
+import NormalUserAccessService;
+import NormalUserAccessServiceImpl;
+import Singleton;
 import user.*;
 
 import java.sql.SQLException;

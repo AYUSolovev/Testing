@@ -1,12 +1,12 @@
 /*import service.question.*;
 import question.*;
-import singleton.Singleton;
+import Singleton;
 
 import java.util.*;
 
 public class TestQuestionService {
     public static void main(String[] args) {
-        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/servlet.Testing/DataBase/servlet.Testing");
+        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/basePackage.Testing/DataBase/basePackage.Testing");
         TestQuestionService testQuestionService = new TestQuestionService();
         //testQuestionService.testCreate("Question2",5,TypeQuestion.ONE_ANSWER,"Author2");
         testQuestionService.testRead(5);

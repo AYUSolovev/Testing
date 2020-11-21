@@ -1,13 +1,13 @@
 /*import service.test.*;
-import singleton.Singleton;
-import model.test.Test;
+import Singleton;
+import Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TestTestService {
     public static void main(String[] args){
-        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/servlet.Testing/DataBase/servlet.Testing");
+        Singleton.getSingleton().setConnection("jdbc:h2:/C:/Users/tolya/basePackage.Testing/DataBase/basePackage.Testing");
         TestTestService testTestService = new TestTestService();
         //testTestService.testCreate("Test1");
         testTestService.testRead();
